@@ -9,7 +9,7 @@ pipeline {
         }
     }
     post {
-        successful {
+        success {
             recordIssues(tools: [cppCheck()])
         }
     }
