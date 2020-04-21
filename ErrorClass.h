@@ -3,14 +3,18 @@
 
 #include <string>
 
-class ErrorClass
+#include "ParentClass.h"
+
+class ErrorClass : public ParentClass
 {
 public:
     // single argument constructor should be explicit
     ErrorClass( const std::string& );
 
-    ~ErrorClass()
+    virtual ~ErrorClass()
     {}
+
+    virtual int overrideMethod();
 };
 
 #endif // ERROR_CLASS_H_INCLUDED
