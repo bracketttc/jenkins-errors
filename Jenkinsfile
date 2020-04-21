@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mkdir build && cd build && cmake .. && make'
+                sh 'mkdir -p build && cd build && rm -rf && cmake .. && make'
             }
         }
     }
